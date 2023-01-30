@@ -14,7 +14,7 @@ spec:
     name: home-kubernetes
   healthChecks:
     - apiVersion: apps/v1
-      kind: Deployment
+      kind: HelmRelease
       name: code-server
       namespace: default
   interval: 30m
