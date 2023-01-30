@@ -6,7 +6,7 @@ metadata:
   name: cluster-apps-longhorn
   namespace: flux-system
   labels:
-    substitution.flux.home.arpa/enabled: "false"
+    substitution.flux.home.arpa/enabled: "true"
 spec:
   path: ./kubernetes/apps/longhorn-system/longhorn/app
   prune: true
