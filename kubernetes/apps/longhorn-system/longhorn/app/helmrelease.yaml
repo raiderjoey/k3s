@@ -44,20 +44,21 @@ spec:
       defaultReplicaCount: 1
       defaultLonghornStaticStorageClass: longhorn
     ingress:
-      enabled: true
-      ingressClassName: nginx
-      hosts:
-        - host: &host "longhorn.${SECRET_DOMAIN}"
-          paths:
-            - path: /
-              pathtype: Prefix
-      tls:
-        - hosts:
-            - *host
+      main:
+        enabled: true
+        ingressClassName: nginx
+        hosts:
+          - host: &host "longhorn.${SECRET_DOMAIN}"
+            paths:
+              - path: /
+                pathtype: Prefix
+        tls:
+          - hosts:
+              - *host
       annotations:
         # external-dns.alpha.kubernetes.io/target: "longhorn.${SECRET_DOMAIN}"
         # cert-manager.io/cluster-issuer: letsencrypt-production
         hajimari.io/enable: "true"
         hajimari.io/icon: cow
-        hajimari.io/group: storage
+        # hajimari.io/group: storage
         hajimari.io/appName: longhorn
