@@ -58,3 +58,9 @@ spec:
     persistence:
       config:
         enabled: true
+        type: pvc
+        readOnly: false
+        nameOverride: code-server-pv
+        accessMode: ReadWriteMany
+        size: 5Gi
+        retain: true
