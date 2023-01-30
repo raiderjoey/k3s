@@ -36,7 +36,7 @@ spec:
     defaultSettings:
       backupstorePollInterval: 300
       # backupTarget: nfs://${NAS_ADDRESS}:/volume1/Backup
-      createDefaultDiskLabeledNodes: true
+      # createDefaultDiskLabeledNodes: true
       defaultDataLocality: best-effort
       nodeDownPodDeletionPolicy: delete-both-statefulset-and-deployment-pod
       concurrentAutomaticEngineUpgradePerNodeLimit: 1
