@@ -49,10 +49,12 @@ spec:
           hajimari.io/group: development
           hajimari.io/appName: Code-Server
         hosts:
-          - host: "code-server.${SECRET_DOMAIN}"
+          - host: &host "{{ .Release.Name }}.${SECRET_DOMAIN}"
             paths:
               - path: /
-        tls: true
+        tls: 
+          - hosts:
+              - *host
     persistence:
       config:
         enabled: true
