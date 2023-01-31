@@ -67,7 +67,7 @@ spec:
       k3s-config:
         enabled: true
         type: hostPath
-          - path: /home/jhw/cluster/k3s
-            type: Directory
+          path: /home/jhw/cluster/k3s
+          type: Directory
         mountPath: /k3s
         
