@@ -66,8 +66,6 @@ spec:
         retain: true
       k3s-config:
         enabled: true
-        type: hostPath
-          path: /home/jhw/cluster/k3s
-          type: Directory
+        existingClaim: code-server-k3s-config
         mountPath: /k3s
         
