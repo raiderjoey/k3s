@@ -29,7 +29,12 @@ spec:
   values:
     storageClass:
       defaultClass: false
+      pathPattern: "${.PVC.namespace}-${.PVC.name}"
     nfs:
       server: ${NAS_ADDRESS}
       path: /volume1/NAS
+      mountOptions:
+        - noatime
+        - nodiratime
+        - nfsvers=4.1
       volumeName: nfs-client-root
