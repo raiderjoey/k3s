@@ -17,4 +17,7 @@
     "editor.guides.highlightActiveBracketPair": true,
     "editor.hover.delay": 1500,
     "files.trimTrailingWhitespace": true,
+    "files.exclude": {
+        "**/.git": false
+    },
 }
