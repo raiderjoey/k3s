@@ -60,7 +60,14 @@ spec:
         enabled: true
         type: pvc
         readOnly: false
-        nameOverride: code-server-pv
+#        nameOverride: code-server-pv
         accessMode: ReadWriteMany
         size: 5Gi
         retain: true
+      k3s-config:
+        enabled: true
+        type: hostPath
+          - path: /home/jhw/cluster/k3s
+            type: Directory
+        mountPath: /k3s
+        
