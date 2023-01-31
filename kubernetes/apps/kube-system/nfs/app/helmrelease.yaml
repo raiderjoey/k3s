@@ -25,11 +25,10 @@ spec:
       retries: 3
   uninstall:
     keepHistory: false
-
   values:
     storageClass:
+      name: nfs
       defaultClass: false
-      pathPattern: "${.PVC.namespace}-${.PVC.name}"
     nfs:
       server: ${NAS_ADDRESS}
       path: /volume1/NAS
