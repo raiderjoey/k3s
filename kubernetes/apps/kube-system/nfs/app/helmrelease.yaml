@@ -32,3 +32,4 @@ spec:
     nfs:
       server: ${NAS_ADDRESS}
       path: /volume1/NAS
+      volumeName: nfs-client-root
