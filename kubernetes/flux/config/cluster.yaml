@@ -5,7 +5,7 @@ metadata:
   name: home-kubernetes
   namespace: flux-system
 spec:
-  interval: 3m
+  interval: 30m
   ref:
     branch: main
   url: "https://github.com/raiderjoey/k3s"
@@ -21,7 +21,7 @@ metadata:
   name: cluster
   namespace: flux-system
 spec:
-  interval: 3m
+  interval: 30m
   path: ./kubernetes/flux
   prune: true
   wait: false
