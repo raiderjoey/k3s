@@ -36,8 +36,8 @@ spec:
     defaultSettings:
       backupstorePollInterval: 300
       # backupTarget: nfs://${NAS_ADDRESS}:/volume1/Backup
-      createDefaultDiskLabeledNodes: true
       defaultDataLocality: best-effort
+      defaultDataPath: /var/lib/longhorn
       nodeDownPodDeletionPolicy: delete-both-statefulset-and-deployment-pod
       concurrentAutomaticEngineUpgradePerNodeLimit: 1
       storageMinimalAvailablePercentage: 10
