@@ -10,8 +10,8 @@ access_control:
       policy: bypass
     - domain: ['*.${EXTERNAL_DOMAIN}']
       policy: one_factor
-# identity_providers:
-#   oidc:
-#     cors:
-#       endpoints: ['authorization', 'token', 'revocation', 'introspection']
-#       allowed_origins_from_client_redirect_uris: true
+  identity_providers:
+    oidc:
+      cors:
+        endpoints: ['authorization', 'token', 'revocation', 'introspection']
+        allowed_origins_from_client_redirect_uris: true
