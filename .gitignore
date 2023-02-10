@@ -18,3 +18,5 @@ terraform.tfstate*
 # cluster
 .config.env
 .gitconfig
+secret*.yaml
+secret*.toml
