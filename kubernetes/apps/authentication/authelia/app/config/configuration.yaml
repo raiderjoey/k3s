@@ -1,0 +1,17 @@
+---
+session:
+  redis:
+    host: redis-master-0.redis-headless.databases.svc.cluster.local
+    port: 6379
+access_control:
+  default_policy: deny
+  rules:
+    - domain: ['auth.${EXTERNAL_DOMAIN}']
+      policy: bypass
+    - domain: ['*.${EXTERNAL_DOMAIN}']
+      policy: one_factor
+# identity_providers:
+#   oidc:
+#     cors:
+#       endpoints: ['authorization', 'token', 'revocation', 'introspection']
+#       allowed_origins_from_client_redirect_uris: true
