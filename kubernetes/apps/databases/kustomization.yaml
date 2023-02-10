@@ -7,5 +7,5 @@ resources:
   - ./namespace.yaml
   # Flux-Kustomizations
   # - ./minio/ks.yaml
-  # - ./postgres/ks.yaml
+  - ./cloudnative-pg/ks.yaml
   - ./redis/ks.yaml
