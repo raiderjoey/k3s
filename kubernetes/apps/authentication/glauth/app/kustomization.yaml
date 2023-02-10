@@ -14,4 +14,4 @@ secretGenerator:
 generatorOptions:
   disableNameSuffixHash: true
 metadata:
-  namespace: authenication
+  namespace: authentication
