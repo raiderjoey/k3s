@@ -6,12 +6,12 @@ session:
 access_control:
   default_policy: deny
   rules:
-    - domain: ['auth.${EXTERNAL_DOMAIN}']
+    - domain: ['auth.${SECRET_DOMAIN}']
       policy: bypass
-    - domain: ['*.${EXTERNAL_DOMAIN}']
+    - domain: ['*.${SECRET_DOMAIN}']
       policy: one_factor
-  identity_providers:
-    oidc:
-      cors:
-        endpoints: ['authorization', 'token', 'revocation', 'introspection']
-        allowed_origins_from_client_redirect_uris: true
+  # identity_providers:
+  #   oidc:
+  #     cors:
+  #       endpoints: ['authorization', 'token', 'revocation', 'introspection']
+  #       allowed_origins_from_client_redirect_uris: true
