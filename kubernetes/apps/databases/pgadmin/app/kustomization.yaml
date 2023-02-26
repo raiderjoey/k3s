@@ -5,7 +5,7 @@ kind: Kustomization
 namespace: databases
 resources:
   - ./pvc.yaml
-#  - ./sops.pgadmin.yaml
+  - ./sops.pgadmin.yaml
   - ./helmrelease.yaml
 configMapGenerator:
   - name: servers-json

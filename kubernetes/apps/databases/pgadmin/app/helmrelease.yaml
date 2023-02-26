@@ -29,9 +29,9 @@ spec:
     # controller:
     #   replicas: 3
     #   strategy: RollingUpdate
-    # envFrom:
-    #   - secretRef:
-    #       name: *app
+    envFrom:
+      - secretRef:
+          name: *app
     service:
       main:
         ports:
