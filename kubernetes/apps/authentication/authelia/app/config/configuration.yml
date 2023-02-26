@@ -3,6 +3,7 @@ session:
   redis:
     host: redis-master-0.redis-headless.databases.svc.cluster.local
     port: 6379
+  domain: ${SECRET_DOMAIN}
 access_control:
   default_policy: deny
   rules:
