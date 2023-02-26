@@ -1,0 +1,29 @@
+apiVersion: v1
+kind: Secret
+metadata:
+    name: cloudnative-pg
+    namespace: databases
+    type: Opaque
+    stringData:
+        POSTGRES_SUPER_PASS: ENC[AES256_GCM,data:zPyfJWinjFkVheAL,iv:9DzQ5/oUaN/ELXFtErZB76nr4DXTwrx/IJZp/NYyxmg=,tag:mNHX5wL17tO/gKOdZBkGiQ==,type:str]
+        POSTGRES_SUPER_USER: ENC[AES256_GCM,data:ZnvY,iv:XThs05hbz2BcamSTJrDC/O6ghaZsT+eoKzXTwN+aiw0=,tag:66vIu+UILtAsUDUnQS9RVw==,type:str]
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age13hgue64xevk8x27umhxz7kyjectc52hrrx8p7kfyanlsmqsxjstskek2va
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBnUThSdFdjUWNlUUd5VlNs
+            QWdRcWZJNm41SHZwU0VEMkpycHhObTA0dnl3CmJESTdmZVpOMVZjbkovczlIcjdi
+            TUJRRzNKd3V6ajZYajVRYXZiNWlScUkKLS0tIFhKQVJqRnFXYTl6RXB6ZCtwUWxE
+            Rm4rMjQ0ZE1ucDcxcWo0bVJmaVVjdVkKNUTwHMbf8exGpcZvyFUwznA3IdFGvqca
+            Livv9zZTy0xuOocBZdy3WmupWvCB0eaTu14iEwCNhE3L1UTqL7oJLw==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2023-02-26T01:36:17Z"
+    mac: ENC[AES256_GCM,data:3DTbNYSo3WwSfWg9pCn/bKRH6NuVDqyAn3TVNG59ZzRRdrXRdRo2W/8k+cMxtK+D8bymL0bujVk0ge74zTQ1ZTKwbRUjTCaBJVCch530kK3YL/dRMoeaIo1kOl+Y46bNz0uGs5470z/uilOohb/RWWA7Id5GhIHvN7fY7WWJ/fk=,iv:J315y/hGEitm6hpLLajqzXwpiEskFSXEQTOiTv1L/8I=,tag:z6q7w/6fwrCmqNlmf5KQEQ==,type:str]
+    pgp: []
+    encrypted_regex: ^(data|stringData)$
+    version: 3.7.3
