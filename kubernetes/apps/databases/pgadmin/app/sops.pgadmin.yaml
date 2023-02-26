@@ -1,0 +1,30 @@
+apiVersion: v1
+kind: Secret
+metadata:
+    name: pgadmin
+    namespace: databases
+type: Opaque
+stringData:
+    #ENC[AES256_GCM,data:t93+deieeCw=,iv:VRDB7EHi25xfLeykJfsz5iWpp3CuLs/3agAxAYmBbEM=,tag:T9tCFpsgQ+OsM1STdUzi/w==,type:comment]
+    PGADMIN_DEFAULT_EMAIL: ENC[AES256_GCM,data:3dOtLuAZ8g/jojVCJqsssd4=,iv:j8G77uPQnUoqvPWuro6YzAYpcm2PD3W2LHCWAX+fAqU=,tag:XIYkjE1QH8DCNBlYaq1pqg==,type:str]
+    PGADMIN_DEFAULT_PASSWORD: ENC[AES256_GCM,data:u1iIppDibmASiKK0,iv:P7hgt35w0Dwzpg1sotijiAeK1YB/MayBLGqIIRB9z9w=,tag:XUJl7OXuHVKq6zywbZiHOw==,type:str]
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age13hgue64xevk8x27umhxz7kyjectc52hrrx8p7kfyanlsmqsxjstskek2va
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBEM003K3lodCtCM2pydEFZ
+            WTJHaFdyaDZ3VjdyS292enFJci9BZlVDNGxzCkpYTXhWNjRkbFdmcjZ5bm9sbzhj
+            ZzlNZHk0MkxBMlVkL1RuQUJnQU1HUTgKLS0tIHE3MmJIZFQ4T2ltSkRDYUZBMmVk
+            SCtjY09BR3k5ckliWmJjZk8rbWRScDQKHD4tt/89a3fKV2eqg20Qq3Z/TZT8JnZT
+            sc5RW0obm3DqHp4beVMTRlJvdBfo6VsX4Bkz28avYmNGmsWtFubFdw==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2023-02-26T12:08:20Z"
+    mac: ENC[AES256_GCM,data:4VSBGTW4ZmSqED8xmq/kDng9K0BIaJ315pMBNuZeF3GJQqQyvJZsgE91zldjfmsM+aEiHYmzw26snIpe4mXIOMjAK0X2Vwoz56Dwv9qTsn4XaChiKXW28IueX6zaBHqzd6ypBrEPlJp2mA9DJiAwUwIl3u/GzTGFW1TZvgCQcUs=,iv:tYIq2bMlueK9rfz19nEJa1JQycziytPPeycKXBV0zqk=,tag:GJgbqzDXerh0fro25VBF4A==,type:str]
+    pgp: []
+    encrypted_regex: ^(data|stringData)$
+    version: 3.7.3
