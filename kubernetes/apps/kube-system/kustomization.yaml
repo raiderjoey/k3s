@@ -8,5 +8,4 @@ resources:
   - ./metrics-server/ks.yaml
   - ./reloader/ks.yaml
   - ./intel-gpu-plugin/ks.yaml
-  - ./nfs/ks.yaml
   - ./snapshot-controller/ks.yaml
