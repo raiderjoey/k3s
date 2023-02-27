@@ -7,8 +7,8 @@ session:
 access_control:
   default_policy: deny
   rules:
-    - domain: ['auth.${SECRET_DOMAIN}']
-      policy: bypass
+#    - domain: ['auth.${SECRET_DOMAIN}']
+#      policy: bypass
     - domain: ['*.${SECRET_DOMAIN}']
       policy: one_factor
   # identity_providers:
