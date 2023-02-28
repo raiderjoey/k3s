@@ -40,6 +40,9 @@ spec:
       namespaceSelector:
         matchNames:
           - default
+          - authentication
+          - databases
+          - downloads
           - monitoring
           - longhorn-system
           - networking
