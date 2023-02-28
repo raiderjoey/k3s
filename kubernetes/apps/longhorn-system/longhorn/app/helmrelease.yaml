@@ -36,7 +36,7 @@ spec:
     defaultSettings:
       deletingConfirmationFlag: true
       backupstorePollInterval: 300
-      backupTarget: nfs://${NAS_ADDRESS}:/volume1/Backup/LonghornTest
+      backupTarget: nfs://${NAS_ADDRESS}:/volume1/NAS/Backup/LonghornTest
       defaultDataLocality: best-effort
       defaultDataPath: /var/lib/longhorn
       nodeDownPodDeletionPolicy: delete-both-statefulset-and-deployment-pod
