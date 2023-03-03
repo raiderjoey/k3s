@@ -64,13 +64,10 @@ spec:
       fsGroup: 568
       fsGroupChangePolicy: OnRootMismatch
       supplementalGroups: [44, 109, 10000]
-    volumeClaimTemplates:
-      - name: config
-        mountPath: /config
-        accessMode: ReadWriteOnce
-        size: 50Gi
-        storageClass: longhorn
     persistence:
+      config:
+        enabled: true
+        existingClaim: jellyfin-config
       media:
         enabled: true
         type: nfs
@@ -83,7 +80,7 @@ spec:
         type: emptyDir
     nodeSelector:
 #      node-role.kubernetes.io/worker: "true"
-      intel.feature.node.kubernetes.io/gpu: "true"
+#      intel.feature.node.kubernetes.io/gpu: "true"
     resources:
       requests:
         gpu.intel.com/i915: 1
