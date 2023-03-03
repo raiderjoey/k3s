@@ -32,7 +32,8 @@ spec:
       annotations:
         reloader.stakater.com/auto: "true"
     image:
-      repository: linuxserver/readarr:nightly
+      repository: ghcr.io/onedr0p/readarr-nightly
+      tag: 0.1.4.1596@sha256:e355ac9318159f77be055b1930728f90a17454926b1188955fe51515a3a8f8c7
     env:
       TZ: ${TIMEZONE}
       PUID: "1000"
@@ -71,6 +72,13 @@ spec:
         tls:
           - hosts:
               - *host
+    podSecurityContext:
+      runAsUser: 568
+      runAsGroup: 568
+      fsGroup: 568
+      fsGroupChangePolicy: 'OnRootMismatch'
+      supplementalGroups:
+        - 100
     persistence:
       config:
         enabled: true
