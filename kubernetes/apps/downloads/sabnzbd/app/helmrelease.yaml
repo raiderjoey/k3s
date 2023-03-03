@@ -68,7 +68,7 @@ spec:
       media:
         enabled: true
         type: nfs
-        server: ${NAS_ADDRESS}
+        server: "${NAS_ADDRESS}"
         path: /volume1/NAS/Media
         mountPath: /media
       incomplete:
