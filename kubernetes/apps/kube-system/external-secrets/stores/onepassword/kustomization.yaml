@@ -5,7 +5,7 @@ kind: Kustomization
 namespace: kube-system
 resources:
   - ./sops.secret.yaml
-  #- ./helmrelease.yaml
+  - ./helmrelease.yaml
   - ./clustersecretstore.yaml
 labels:
   - pairs:
