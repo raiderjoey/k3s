@@ -33,5 +33,4 @@ spec:
   csi:
     driver: driver.longhorn.io
     fsType: ext4
-    volumeHandle: bazarr-config
   storageClassName: longhorn
