@@ -15,19 +15,3 @@ spec:
       storage: 10Gi
   storageClassName: longhorn
   volumeName: bazarr-config
----
-kind: PersistentVolume
-apiVersion: v1
-metadata:
-  name: bazarr-config
-  namespace: downloads
-  labels:
-    app.kubernetes.io/name: &name bazarr
-    app.kubernetes.io/instance: *name
-spec:
-  capacity:
-    storage: 10Gi
-  volumeMode: Filesystem
-  accessModes:
-    - ReadWriteOnce
-  storageClassName: longhorn
