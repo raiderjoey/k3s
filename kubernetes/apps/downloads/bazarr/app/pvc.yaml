@@ -14,4 +14,3 @@ spec:
     requests:
       storage: 10Gi
   storageClassName: longhorn
-  volumeName: bazarr-config
