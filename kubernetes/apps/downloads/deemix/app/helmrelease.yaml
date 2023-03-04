@@ -36,8 +36,8 @@ spec:
       tag: latest
     env:
       TZ: ${TIMEZONE}
-      PUID: "1000"
-      PGID: "1000"
+      PUID: 1000
+      PGID: 1000
       UMASK_SET: 022
     service:
       main:
