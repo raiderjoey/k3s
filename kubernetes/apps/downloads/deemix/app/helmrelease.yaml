@@ -33,6 +33,7 @@ spec:
         reloader.stakater.com/auto: "true"
     image:
       repository: registry.gitlab.com/bockiii/deemix-docker
+      tag: latest
     env:
       TZ: ${TIMEZONE}
     service:
