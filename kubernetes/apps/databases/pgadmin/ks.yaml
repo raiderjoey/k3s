@@ -23,3 +23,5 @@ spec:
       namespace: databases
   dependsOn:
     - name: cluster-apps-longhorn
+    - name: cluster-apps-cloudnative-pg
+    - name: clouster-apps-cloudnative-pg-cluster

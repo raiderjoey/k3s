@@ -21,6 +21,8 @@ spec:
       kind: HelmRelease
       name: cloudnative-pg
       namespace: databases
+  dependsOn:
+    - name: cluster-apps-longhorn
 ---
 ## yaml-language-server: $schema=https://kubernetes-schemas.trux.dev/kustomization_v1beta2.json
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
@@ -44,6 +46,9 @@ spec:
       kind: Cluster
       name: postgres
       namespace: databases
+  dependsOn:
+    - name: cluster-apps-longhorn
+    - name: cluster-apps-cloudnative-pg
   # dependsOn:
   #   - name: cluster-apps-cloudnative-pg
   #   - name: cluster-apps-kyverno

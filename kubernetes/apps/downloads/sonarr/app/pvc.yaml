@@ -14,3 +14,24 @@ spec:
     requests:
       storage: 10Gi
   storageClassName: longhorn
+  volumeName: sonarr-config
+---
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: sonarr-config
+  namespace: downloads
+  labels:
+    app.kubernetes.io/name: *name
+    app.kubernetes.io/instance: *name
+spec:
+  capacity:
+    storage: 10Gi
+  volumeMode: Filesystem
+  accessModes:
+    - ReadWriteOnce
+  csi:
+    driver: driver.longhorn.io
+    fsType: ext4
+    volumeHandle: sonarr-config
+  storageClassName: longhorn

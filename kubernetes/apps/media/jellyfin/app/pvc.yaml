@@ -14,3 +14,24 @@ spec:
     requests:
       storage: 50Gi
   storageClassName: longhorn
+  volumeName: jellyfin-config
+---
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: jellyfin-config
+  namespace: media
+  labels:
+    app.kubernetes.io/name: *name
+    app.kubernetes.io/instance: *name
+spec:
+  capacity:
+    storage: 50Gi
+  volumeMode: Filesystem
+  accessModes:
+    - ReadWriteOnce
+  csi:
+    driver: driver.longhorn.io
+    fsType: ext4
+    volumeHandle: jellyfin-config
+  storageClassName: longhorn
