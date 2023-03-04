@@ -22,7 +22,7 @@ metadata:
   name: readarr-config
   namespace: downloads
   labels:
-    app.kubernetes.io/name: *name
+    app.kubernetes.io/name: &name readarr
     app.kubernetes.io/instance: *name
 spec:
   capacity:

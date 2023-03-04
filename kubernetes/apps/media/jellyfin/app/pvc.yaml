@@ -22,7 +22,7 @@ metadata:
   name: jellyfin-config
   namespace: media
   labels:
-    app.kubernetes.io/name: *name
+    app.kubernetes.io/name: &name jellyfin
     app.kubernetes.io/instance: *name
 spec:
   capacity:

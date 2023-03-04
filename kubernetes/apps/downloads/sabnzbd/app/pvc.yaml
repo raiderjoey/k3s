@@ -22,7 +22,7 @@ metadata:
   name: sabnzbd-config
   namespace: downloads
   labels:
-    app.kubernetes.io/name: *name
+    app.kubernetes.io/name: &name sabnzbd
     app.kubernetes.io/instance: *name
 spec:
   capacity:

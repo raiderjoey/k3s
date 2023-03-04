@@ -23,7 +23,7 @@ metadata:
   name: pgadmin-config-v1
   namespace: databases
   labels:
-    app.kubernetes.io/name: *name
+    app.kubernetes.io/name: &name pgadmin
     app.kubernetes.io/instance: *name
 spec:
   capacity:

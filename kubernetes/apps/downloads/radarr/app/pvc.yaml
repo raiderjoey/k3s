@@ -22,7 +22,7 @@ metadata:
   name: radarr-config
   namespace: downloads
   labels:
-    app.kubernetes.io/name: *name
+    app.kubernetes.io/name: &name radarr
     app.kubernetes.io/instance: *name
 spec:
   capacity:

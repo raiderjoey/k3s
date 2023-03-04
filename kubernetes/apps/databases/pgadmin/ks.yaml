@@ -24,4 +24,4 @@ spec:
   dependsOn:
     - name: cluster-apps-longhorn
     - name: cluster-apps-cloudnative-pg
-    - name: clouster-apps-cloudnative-pg-cluster
+    - name: cluster-apps-cloudnative-pg-cluster

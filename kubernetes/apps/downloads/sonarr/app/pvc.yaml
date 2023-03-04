@@ -22,7 +22,7 @@ metadata:
   name: sonarr-config
   namespace: downloads
   labels:
-    app.kubernetes.io/name: *name
+    app.kubernetes.io/name: &name sonarr
     app.kubernetes.io/instance: *name
 spec:
   capacity:
