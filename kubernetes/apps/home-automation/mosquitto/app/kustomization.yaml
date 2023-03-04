@@ -7,12 +7,6 @@ resources:
   - ./pvc.yaml
   - ./sops.secret.yaml
   - ./helmrelease.yaml
-configMapGenerator:
-  - name: mosquitto-configmap
-    files:
-      - mosquitto.conf=./config/mosquitto.conf
-configurations:
-  - ./patches/kustomizeconfig.yaml
 labels:
   - pairs:
       app.kubernetes.io/name: mosquitto
