@@ -1,0 +1,86 @@
+---
+# yaml-language-server: $schema=https://kubernetes-schemas.devbu.io/helmrelease_v2beta1.json
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: mosquitto
+  namespace: default
+spec:
+  interval: 15m
+  chart:
+    spec:
+      chart: app-template
+      version: 1.3.2
+      sourceRef:
+        kind: HelmRepository
+        name: bjw-s
+        namespace: flux-system
+  maxHistory: 3
+  install:
+    createNamespace: true
+    remediation:
+      retries: 3
+  upgrade:
+    cleanupOnFail: true
+    remediation:
+      retries: 3
+  uninstall:
+    keepHistory: false
+  values:
+    image:
+      repository: public.ecr.aws/docker/library/eclipse-mosquitto
+      tag: 2.0.15
+    service:
+      main:
+        type: LoadBalancer
+        externalTrafficPolicy: Local
+        loadBalancerIP: '${SVC_MOSQUITTO_ADDR}'
+        ports:
+          http:
+            enabled: false
+          mqtt:
+            enabled: true
+            primary: true
+            port: 1883
+    podSecurityContext:
+      runAsUser: 568
+      runAsGroup: 568
+      fsGroup: 568
+      fsGroupChangePolicy: OnRootMismatch
+    configMaps:
+      config:
+        enabled: true
+        data:
+          mosquitto.conf: |
+            pid_file /var/run/mosquitto.pid
+            persistence true
+            persistence_location /mqtt/data/
+            user mosquitto
+            allow_anonymous false
+            password_file /mosquitto/config/pwfile
+            port 1883
+            log_dest file /mosquitto/log/mosquitto.log
+            log_dest stdout
+    persistence:
+      config:
+        enabled: true
+        existingClaim: mosquitto-config
+        mountPath: /mqtt/data
+      config-file:
+        enabled: true
+        name: mosquitto-config-file
+        mountPath: /mosquitto/config/mosquitto.conf
+        subPath: mosquitto.conf
+      secret-file:
+        enabled: true
+        type: secret
+        name: mosquitto-secret
+        subPath: pwfile
+        mountPath: /mosquitto/config/pwfile
+        readOnly: true
+    resources:
+      requests:
+        cpu: 10m
+        memory: 50Mi
+      limits:
+        memory: 150Mi
