@@ -15,3 +15,23 @@ spec:
     requests:
       storage: 1Gi
   storageClassName: longhorn
+---
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: zigbee2mqtt-config
+  namespace: downloads
+  labels:
+    app.kubernetes.io/name: &name zigbee2mqtt
+    app.kubernetes.io/instance: *name
+spec:
+  capacity:
+    storage: 1Gi
+  volumeMode: Filesystem
+  accessModes:
+    - ReadWriteOnce
+  csi:
+    driver: driver.longhorn.io
+    fsType: ext4
+    volumeHandle: zigbee2mqtt-config
+  storageClassName: longhorn
