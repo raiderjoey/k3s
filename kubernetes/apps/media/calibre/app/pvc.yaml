@@ -1,0 +1,37 @@
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: calibre-config
+  namespace: media
+  labels:
+    app.kubernetes.io/name: &name calibre
+    app.kubernetes.io/instance: *name
+    snapshot.home.arpa/enabled: "true"
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 10Gi
+  storageClassName: longhorn
+---
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: calibre-config
+  namespace: networking
+  labels:
+    app.kubernetes.io/name: &name calibre
+    app.kubernetes.io/instance: *name
+spec:
+  capacity:
+    storage: 10Gi
+  volumeMode: Filesystem
+  accessModes:
+    - ReadWriteOnce
+  csi:
+    driver: driver.longhorn.io
+    fsType: ext4
+    volumeHandle: calibre-config
+  storageClassName: longhorn
