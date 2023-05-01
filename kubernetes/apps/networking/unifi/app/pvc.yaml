@@ -1,0 +1,37 @@
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: unifi-config
+  namespace: networking
+  labels:
+    app.kubernetes.io/name: &name unifi
+    app.kubernetes.io/instance: *name
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 10Gi
+  storageClassName: longhorn
+  volumeName: unifi-config
+---
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: unifi-config
+  namespace: networking
+  labels:
+    app.kubernetes.io/name: &name unifi
+    app.kubernetes.io/instance: *name
+spec:
+  capacity:
+    storage: 10Gi
+  volumeMode: Filesystem
+  accessModes:
+    - ReadWriteOnce
+  csi:
+    driver: driver.longhorn.io
+    fsType: ext4
+    volumeHandle: unifi-config
+  storageClassName: longhorn
