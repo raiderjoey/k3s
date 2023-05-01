@@ -20,7 +20,7 @@ kind: PersistentVolume
 apiVersion: v1
 metadata:
   name: calibre-config
-  namespace: networking
+  namespace: media
   labels:
     app.kubernetes.io/name: &name calibre
     app.kubernetes.io/instance: *name
