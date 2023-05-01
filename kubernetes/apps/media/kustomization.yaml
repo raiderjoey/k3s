@@ -4,4 +4,4 @@ kind: Kustomization
 resources:
   - ./namespace.yaml
   - ./jellyfin/ks.yaml
-#  - ./calibre/ks.yaml
+  - ./calibre/ks.yaml
