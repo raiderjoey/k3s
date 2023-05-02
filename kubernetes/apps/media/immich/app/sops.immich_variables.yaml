@@ -5,20 +5,20 @@ metadata:
     namespace: media
 type: Opaque
 stringData:
-    #ENC[AES256_GCM,data:55ofW/kLoA==,iv:SCBEWhVNgcDApypMvR9N0zbrhSIp5BCPdsQsXeuxmjk=,tag:7CjbssXB/d4aYFKy4vpJOQ==,type:comment]
-    DB_DATABASE_NAME: ENC[AES256_GCM,data:cpYlG7jE,iv:uarVr028ydj7/lYDPfOXe54AFQ5ParA1aKl9dxE15L8=,tag:ek4LLD0qbUS7gCSGQY5nhQ==,type:str]
-    DB_HOSTNAME: ENC[AES256_GCM,data:Y4XesS9oB5/oul3zLAGEhSoCjjDLJNaH/yFGlfLzL5i3RDGYCzJ6,iv:hOLh0ycR/m8LHBnQ0Q/bg4XxwG1LtOP2Dwsa+jG7fSM=,tag:ZRYn0OK3mtssHRpheu9k8A==,type:str]
-    DB_PASSWORD: ENC[AES256_GCM,data:kA0HaleUpW5nzQI=,iv:ELymhbpEnnGrKN7yWE71I9MfWJk/m8yEMz1+6MD9+Ug=,tag:aG6fvDRA5pOm9S3zgdXpVw==,type:str]
-    DB_USERNAME: ENC[AES256_GCM,data:+Iy/VOYV,iv:uD9x+OVjmJO19M6R43rqCsVCYriq1OdXb0EF/ugum8g=,tag:zwNJGecgzjqDFGRGOYhh1g==,type:str]
-    JWT_SECRET: ENC[AES256_GCM,data:OsbDqAPcGfbVFN/Nuuqf70XCjR+YmbOjQwR+,iv:KcdyNdj3OhdkD8GVNZVHmNV5bMjRHrzaDmiKhOknzBo=,tag:kpfaq45q4S9dH1U/FWj6hQ==,type:str]
-    TYPESENSE_API_KEY: ENC[AES256_GCM,data:HialhJJIsxlRO510dqqiQ1eE/oD+txLkeKFI,iv:j5Vf4wkmkxHvflrXXsXv0NaPXzc7FRaWY/Jzziqfn/w=,tag:D7LcqLdKkh7DB/ommY2juQ==,type:str]
-    #ENC[AES256_GCM,data:4lZtnD5sjsX79VAbiJM=,iv:pWurFPGyhGgCuT0vRvWtW1NvwQvqBQnArhZA98Jwgos=,tag:vRtI+AoAHmkwM5tdxRYffw==,type:comment]
-    POSTGRES_DB: ENC[AES256_GCM,data:a0RZG/i6,iv:8q336NHwaxXXzjM3x5izOdbWNwbOJPwG3UGW1cKJGok=,tag:qdywdr4sKvqbo25NJ3EkOw==,type:str]
-    POSTGRES_HOST: ENC[AES256_GCM,data:o7evZr3e6waPq1kHlGPf0QCwWIRbO0QoHEG073jgKEbruH+LivWT,iv:kJ0okYLXN31Lkq9W9zmZxrU/BL3EPLzqwz0WgxqDp+s=,tag:PWrHr3bElKD0mN84+/+2Qw==,type:str]
-    POSTGRES_PASS: ENC[AES256_GCM,data:sxst+hlcdy9UYic=,iv:GreWxB/819IKlCi693URFcSAVphh66/dgUoTfQn7VRA=,tag:6sRn4ibQyDU5CYv+4Ygulw==,type:str]
-    POSTGRES_SUPER_USER: ENC[AES256_GCM,data:UBw5yivouOc=,iv:tu5j7glpQYM84pEI1dI6eXb3ABXXHmh0NY/6OBVEMCQ=,tag:YdOuCWB6hDFPboaHeKL94w==,type:str]
-    POSTGRES_SUPER_PASS: ENC[AES256_GCM,data:W78IIJwumFjsiyLt,iv:ySdkYAokkRJHWiVxb8MLndedCq6e3aE0T76Bxb6RRZU=,tag:l9Kn7xhwYEIHKLSjijoJbw==,type:str]
-    POSTGRES_USER: ENC[AES256_GCM,data:IO+dOC7Q,iv:/xgva+O2Cpl1K9E80E933ovtQ7xSy8ay3U5g56r4PYw=,tag:YFqlLlUop43gKXlK9ahUmg==,type:str]
+    #ENC[AES256_GCM,data:nuQRY2g+HA==,iv:k6JoLdnO17q7Ks+iQlrKiNUdE4axf9KMXfLN9CTOEns=,tag:8W/pSjqcY5hsGkujRWKmYA==,type:comment]
+    DB_DATABASE_NAME: ENC[AES256_GCM,data:KswT2ela,iv:Xmuu+uEJL2T1elUWW8PEoxXbsQDSDhNziXG6hbVx4a4=,tag:M9TxCq7Eg4KPLcBwvptvGQ==,type:str]
+#  DB_HOSTNAME: postgres-rw.databases.svc.cluster.local
+#  DB_PASSWORD: raiders7528
+#  DB_USERNAME: immich
+#  JWT_SECRET: randomjwtsecretstringrandom
+#  TYPESENSE_API_KEY: 'typesenseapikeyrandomstring'
+#  # Postgres Init
+#  POSTGRES_DB: immich
+#  POSTGRES_HOST: postgres-rw.databases.svc.cluster.local
+#  POSTGRES_PASS: raiders7528
+#  POSTGRES_SUPER_USER: postgres
+#  POSTGRES_SUPER_PASS: raiderS7528!
+#  POSTGRES_USER: immich
 sops:
     kms: []
     gcp_kms: []
@@ -28,14 +28,14 @@ sops:
         - recipient: age13hgue64xevk8x27umhxz7kyjectc52hrrx8p7kfyanlsmqsxjstskek2va
           enc: |
             -----BEGIN AGE ENCRYPTED FILE-----
-            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSB1NkZPRnNQaTNjc3pkSVoz
-            Uk9YYTRxbmRoMHc2ZnpSVHVJSE0xdGkxelJnCkJIK01xMytHMXVVWGNXUS9ZSTlX
-            QXEzOE5qRzZ3KzIxazZGV3FSTFBtNGcKLS0tIFBtZnNiVC9hTkt3UkNLWWlxOWIy
-            L2JTZW9kRWQ0ai9QVEpWcGJndGJLTVUKQlS6xKFWuGA2/1uyAJR2jhuZo+PXkR8g
-            TI+LPacRrZuehvdyWPCJ3MfETzzncL2Skgd+vzqqlT7tFI2xFIY2YQ==
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSB4RGlnUU5ka3FQdG1HUkVK
+            eWl4UUwrU2JyZXptUVJKc0pCYUpxOWkzdUc4CjBnQlpJb2NVUVZHT05IcHRZcW1q
+            QXhhREpYU0F4Wm8vMnB3dHpXNGNxbG8KLS0tIHRRSDJKU0ZDSXpza2Q1VUhiT1Vz
+            aUZjbFRPcGoyNi80emtESmdHYmxmcEEK1zYxZX/N9MoT0T6QIIb1NApw1vg6vIbs
+            3ko9vK8bh7FKZH2M6tpqtg4tk0kMjJaoQWmdHHHZGIelfucBTz5YrQ==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2023-05-02T20:09:57Z"
-    mac: ENC[AES256_GCM,data:q3hVeiZQoI7e9j8qbAuIqFF1UcFB2Qv46DDrw1rN6ap9fh/rNWaHN8ETTBVMKKNKRJBtHeDSmOkRwpBk4DWJWC11wKH5o/HpleS3jVHAfn6Ppa+16gPcLM+KJoZiJFEHFTN1gZekv5+U698Ft6s0B64E4Nk8H3nvUpYiSgxEC7E=,iv:MjJjPqYBKzCSuuUVzzBC2RHuPUtsOPNb4qXbyWFAhHM=,tag:yuVT7eHWFaNZxT1Qk8czBw==,type:str]
+    lastmodified: "2023-05-02T20:26:25Z"
+    mac: ENC[AES256_GCM,data:y5PPHTX3eQ2oMnShd6mx/SbKgDA9iKmwQiecANrPof3L8uQclSQ+6eaPrW79vjrzInmAn+RozbKdAoqyE5Un8YnW/9HTT50T8LZqSBDj5EAeM8VAwmA9EwzSEz7GzWSPc+GLGpc7wrdAAIAd1GHY4n/zir49mg82oX5YW4I0+P8=,iv:IWGjMXusn1QsZC3eyiPQwLNLAvfT5IeaeEQsaogTkpY=,tag:mnDfPTLCOcwAzSYL+rN+WA==,type:str]
     pgp: []
     encrypted_regex: ^(data|stringData)$
     version: 3.7.3
