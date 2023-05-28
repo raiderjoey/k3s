@@ -1,0 +1,26 @@
+---
+# yaml-language-server: $schema=https://kubernetes-schemas.devbu.io/kustomize.toolkit.fluxcd.io/kustomization_v1.json
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: cluster-apps-home-assistant
+  namespace: flux-system
+spec:
+  dependsOn:
+    - name: cluster-apps-mosquitto
+    - name: cluster-apps-cloudnative-pg
+    - name: cluster-apps-external-secrets-stores
+    - name: cluster-apps-zigbee2mqtt
+    - name: cluster-apps-kyverno
+    - name: cluster-apps-longhorn
+    - name: cluster-apps-ingress-nginx
+#    - name: cluster-apps-volsync
+  path: ./kubernetes/apps/home-automation/home-assistant/app
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: home-kubernetes
+  wait: true
+  interval: 30m
+  retryInterval: 1m
+  timeout: 5m

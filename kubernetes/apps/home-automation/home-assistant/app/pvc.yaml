@@ -2,10 +2,10 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: zigbee2mqtt-config
+  name: home-assistant-config
   namespace: home-automation
   labels:
-    app.kubernetes.io/name: &name zigbee2mqtt
+    app.kubernetes.io/name: &name home-assistant
     app.kubernetes.io/instance: *name
 #    snapshot.home.arpa/enabled: "true"
 spec:
@@ -13,25 +13,25 @@ spec:
     - ReadWriteOnce
   resources:
     requests:
-      storage: 1Gi
+      storage: 50Gi
   storageClassName: longhorn
 ---
 kind: PersistentVolume
 apiVersion: v1
 metadata:
-  name: zigbee2mqtt-config
+  name: home-assistant-config
   namespace: home-automation
   labels:
-    app.kubernetes.io/name: &name zigbee2mqtt
+    app.kubernetes.io/name: &name home-assistant
     app.kubernetes.io/instance: *name
 spec:
   capacity:
-    storage: 1Gi
+    storage: 50Gi
   volumeMode: Filesystem
   accessModes:
     - ReadWriteOnce
   csi:
     driver: driver.longhorn.io
     fsType: ext4
-    volumeHandle: zigbee2mqtt-config
+    volumeHandle: home-assistant-config
   storageClassName: longhorn
