@@ -5,6 +5,7 @@ kind: Kustomization
 namespace: home-automation
 resources:
   - ./sops.homeassistant_variables.yaml
+  - ./pvc.yaml
   - ./helmrelease.yaml
 patchesStrategicMerge:
   - ./patches/addons.yaml
