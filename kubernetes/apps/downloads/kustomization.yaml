@@ -8,4 +8,4 @@ resources:
   - ./sonarr/ks.yaml
   - ./bazarr/ks.yaml
   - ./readarr/ks.yaml
-#  - ./deemix/ks.yaml
+  - ./deemix/ks.yaml
