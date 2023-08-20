@@ -26,7 +26,7 @@ spec:
         maxParallel: 8
       destinationPath: s3://cnpg-backup/
       endpointURL: http://${NAS_ADDRESS}:9000
-      serverName: postgres2
+      serverName: postgres
       s3Credentials:
         accessKeyId:
           name: cloudnative-pg
@@ -36,7 +36,7 @@ spec:
           key: MINIO_SECRET_KEY
   bootstrap:
     recovery:
-      source: &prev-cluster postgres
+      source: &prev-cluster postgres2
   # externalClusters is needed when recovering from an existing cnpg cluster
   externalClusters:
     - name: *prev-cluster
