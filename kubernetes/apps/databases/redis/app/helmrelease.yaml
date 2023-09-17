@@ -28,8 +28,8 @@ spec:
       enabled: false
     master:
       persistence:
-        enabled: true
-        existingClaim: redis-volume
+        enabled: false
+#        existingClaim: redis-volume
     metrics:
       enabled: true
       serviceMonitor:
