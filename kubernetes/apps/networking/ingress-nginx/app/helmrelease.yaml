@@ -51,6 +51,7 @@ spec:
         proxy-body-size: "100M"
         ssl-protocols: "TLSv1.3 TLSv1.2"
         use-forwarded-headers: "true"
+        allow-snippet-annotations: "true"
         log-format-escape-json: "true"
         log-format-upstream: >-
           {"time": "$time_iso8601", "remote_addr": "$proxy_protocol_addr",
