@@ -39,5 +39,8 @@ spec:
 #          csi.storage.k8s.io/snapshotter-secret-name: rook-csi-rbd-provisioner
 #          csi.storage.k8s.io/snapshotter-secret-namespace: rook-ceph
         deletionPolicy: Delete
-    serviceMonitor:
-      create: true
+    controller:
+      serviceMonitor:
+        create: true
+    webhook:
+      enabled: false
