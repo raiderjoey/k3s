@@ -29,7 +29,7 @@ spec:
     storage: 50Gi
   volumeMode: Filesystem
   accessModes:
-    - ReadWriteOnce
+    - ReadWriteMany
   csi:
     driver: driver.longhorn.io
     fsType: ext4
