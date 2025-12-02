@@ -41,7 +41,7 @@ spec:
           app:
             image:
               repository: ghcr.io/coder/code-server
-              tag: 4.23.0
+              tag: 4.106.3
             env:
               TZ: America/New_York
 #              GIT_SSH_COMMAND: ssh -i /config/.ssh/id_ed25519 -o IdentitiesOnly=yes
