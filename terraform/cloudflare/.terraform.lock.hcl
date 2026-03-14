@@ -2,23 +2,23 @@
 # Manual edits may be lost in future updates.
 
 provider "registry.terraform.io/carlpett/sops" {
-  version     = "1.1.1"
-  constraints = "1.1.1"
+  version     = "1.4.0"
+  constraints = "1.4.0"
   hashes = [
-    "h1:0lv+4VCaIRTkBAMXmCxSJC1dsYPuoyBAvnrLsofcseA=",
-    "h1:AM1mG6OjcEL8hIr0PPel85i0HUlLZH8BZer5Dq7uiOM=",
-    "h1:FDG2jSsAr/tWk/w5zuPGovEtCqKxxosCYPlA5msBhec=",
-    "h1:WCfQL+3Nf73jZ40NkduHIBze7vOtYeyXb4t1xoa/3as=",
-    "h1:cl4VtE/cu7gL2DmwXEiNfD9xpv66Xzr4IeUzlGgfMZ0=",
-    "h1:hqyownSt8teS7g0+XDOxmAtuAHB5kDNQkW1voBhLmZU=",
-    "h1:iKoZfVYPK2awiHuf2k0F9CyDjfnYYwoaNC9/pxINU8E=",
-    "zh:175ec198e1b4d1cad1ae559ebe8cdf574617805010c22dfb8af93a2057ba8332",
-    "zh:2b550b2372f71408e7b47b099f314d981bbb82b263cb55248a36a9af8afd44a1",
-    "zh:684544ed3460c34585b090b5de1d4e0caf8eba8e6ba50ad0734cda818a6c86f0",
-    "zh:6ab656d3f3645b8158769f34c16820523a621b9e735c1b3233cecf010ac61dda",
-    "zh:6b1f0007569ea36903c9b2b1b114c3cec7c163d9b83946362c3e165e255f64e7",
-    "zh:7d562f2fc76c954f974f2745557059a4d33dacb8d46e9f1cf09323348dcf5ddc",
-    "zh:cc7e97d8b55ebd90a4c1424cf9cb930af76e98a11c6eeb07e51d648369859fa1",
+    "h1:+RbjOwUWyphZSCZUu7KEaVg6Fz9nvsTASFcmQk5+fpM=",
+    "h1:/VK5jrYKwNdYkyz3rnFHyg04EoLNnA18XYZqmerBbkA=",
+    "h1:JRZ92mvP+m8EF80U1vq1lBe602gtWeyaq9+MCG08o6c=",
+    "h1:JUoee3mwUO97yw+vwKSaHebLaJfEqK+o1EulPVlbX7w=",
+    "h1:QgDTS570QTGGe5cbS6zbEbjrSWC1r0IyA8mHtqYVR3U=",
+    "h1:tkPrqnMG/bwVKVTbdLkx6pdpluVWNFpROGkV8Fd0H6w=",
+    "h1:vpSkG4DCm7h9xKH+7yVWQohvUkwj4DxYMHMa540KOko=",
+    "zh:16a29544498de504d8f451fe7168dd3518739e5f2afc92d5e75d564951bd5a5c",
+    "zh:39f8913224a463aa8a1cdf7ef8c5c8e4fdea8631387016aefa1a688a1fac5a53",
+    "zh:432fbb45a6006855f4fdd14f386efb93d151213f2e95a4a6e775048825e4ebb6",
+    "zh:96a6f2b1bb89be020e115096745146bcbac07cde46f530a8891f9fddc15eee91",
+    "zh:99689b2cf75b0b7703c031417f371a54fe201eb342728adaadb7d558bfecba31",
+    "zh:ace19ad9cd9b0e7c981a9f0c0a87f4aacb644a7837aa3baa7cfa06c25a96f007",
+    "zh:ec13176354490aa6e2ee3481539c15ee073593e14e459701c9a6e09072cf7ada",
   ]
 }
 
